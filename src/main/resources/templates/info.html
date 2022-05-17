@@ -12,10 +12,10 @@
 
 <div>
     <span style="font-weight: bold">Your personal information</span></br>
-    <span th:text="${theCustomer.getUserName()}"></span></br>
-    <span th:text="${theCustomer.getAddress()}"></span></br>
-    <span th:text="${theCustomer.getPhoneNumber()}"></span></br>
-    <span th:text="${theCustomer.getLevel()}"></span></br>
+    <span th:text="'Name: '+${theCustomer.getUserName()}"></span></br>
+    <span th:text="'Address:  '+${theCustomer.getAddress()}"></span></br>
+    <span th:text="'Phone number:  '+${theCustomer.getPhoneNumber()}"></span></br>
+    <span th:text="'Level:  '+${theCustomer.getLevel()}"></span></br>
 </div>
 </body>
 </html>
