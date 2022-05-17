@@ -20,17 +20,10 @@ public class CustomerController {
 
 
     @GetMapping("/info")
-    public String viewInformation(Model model)
-    {
-       // String password=null;//~~
-        //get the username from the session:
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();//~~
-        String userName = authentication.getName();
-       // String userName2=authentication.getPrincipal();//~~
-      //  Object object=authentication.getCredentials();
-       // if(object instanceof String)
-         //   password=(String)object;
+    public String viewInformation(Model model) {
 
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String userName = authentication.getName();
         Customer customer = customerService.getCustomerByUsername(userName);
         model.addAttribute("theCustomer", customer);
         return "info";

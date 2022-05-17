@@ -28,8 +28,7 @@ public class Customer {
         this.level = level;
     }
 
-    //It needs to have getters and setters to be a bean, so it can be used from a webpage
-
+    //It needs to have getters and setters to be a bean, so it can be used from a web page
 
     public long getId() {
         return id;
